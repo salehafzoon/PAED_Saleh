@@ -36,6 +36,8 @@ from utils import safe_divide, _get_learning_rate
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
+import warnings
+warnings.filterwarnings("ignore")
 
 class Trainer(nn.Module):
     def __init__(self, train_args, vae_args, data_args,
@@ -676,14 +678,20 @@ def run_eval(save_dir: str, path_model: str, path_test: str, data_name: str, spl
 class ExtractorArg(BaseModel):
     model_dir: str
     do_pretrain: bool
-    batch_size: int = 8  
+    # batch_size: int = 8  
+    batch_size: int = 32  
+    
     grad_accumulation: int = 4 
     random_seed: int = 42 
     warmup_ratio: float = 0.2
     lr_pretrain: float = 3e-5 
     lr_finetune: float = 6e-6 
-    epochs_pretrain: int = 5 
-    epochs_finetune: int = 5
+    # epochs_pretrain: int = 5 
+    # epochs_finetune: int = 5
+    
+    epochs_pretrain: int = 2
+    epochs_finetune: int = 1
+    
     label_smoothing_factor: float = 0.
     train_fp16: bool = True 
 

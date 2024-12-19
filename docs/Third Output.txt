@@ -1,0 +1,953 @@
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.47.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading file vocab.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/vocab.json
+loading file merges.txt from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/merges.txt
+loading file tokenizer.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/tokenizer.json
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at None
+loading file tokenizer_config.json from cache at None
+loading file chat_template.jinja from cache at None
+loading configuration file config.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.47.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+gen_init...: 28167it [05:08, 91.17it/s]
+
+ dataloader initialized!
+Could not locate the tokenizer configuration file, will try to use the model config instead.
+loading configuration file config.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.47.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading file vocab.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/vocab.json
+loading file merges.txt from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/merges.txt
+loading file tokenizer.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/tokenizer.json
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at None
+loading file tokenizer_config.json from cache at None
+loading file chat_template.jinja from cache at None
+loading configuration file config.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.47.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+gen_init...: 4088it [00:06, 626.35it/s]
+
+ dataloader initialized!
+loading configuration file config.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "output_hidden_states": true,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.47.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading weights file model.safetensors from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/model.safetensors
+Generate config GenerationConfig {
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "output_hidden_states": true,
+  "pad_token_id": 1
+}
+
+All model checkpoint weights were used when initializing BartForConditionalGeneration.
+
+All the weights of BartForConditionalGeneration were initialized from the model checkpoint at facebook/bart-base.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BartForConditionalGeneration for predictions without further training.
+Generation config file not found, using a generation config created from the model config.
+iteration: 3521it [00:45, 77.06it/s]                                                             | 0/10 [00:00<?, ?it/s]
+{'Reconstruction_Loss': 4.739029529592073, 'KLD': 56.162615472672506, 'BoW_Loss': 3.1513912424658437, 'loss': 1.6137829213208754, 'lr_vae': 0.005005681818181819}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 213.03it/s]
+{'loss': 5.091888736605411, 'Reconstruction_Loss': 3.5669398546220994, 'KLD': 88.67592355089879, 'BoW_Loss': 2.6065181391474135}
+iteration: 3521it [00:45, 77.89it/s]                                                     | 1/10 [00:48<07:13, 48.15s/it]
+{'Reconstruction_Loss': 3.2860421762739267, 'KLD': 93.24135981145078, 'BoW_Loss': 2.3731554997502395, 'loss': 1.176430830119923, 'lr_vae': 0.009997159090909091}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 209.92it/s]
+{'loss': 5.026613772032079, 'Reconstruction_Loss': 3.5332550508899687, 'KLD': 94.01027579410201, 'BoW_Loss': 2.5166660693958094}
+iteration: 3521it [00:44, 79.53it/s]                                                     | 2/10 [01:35<06:23, 47.88s/it]
+{'Reconstruction_Loss': 3.1395604604949976, 'KLD': 109.301641839636, 'BoW_Loss': 2.196749080520394, 'loss': 1.127797275908594, 'lr_vae': 0.008745738636363637}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 209.90it/s]
+{'loss': 4.949945650921876, 'Reconstruction_Loss': 3.472411085129479, 'KLD': 112.79248924777933, 'BoW_Loss': 2.3911067179627414}
+iteration: 3521it [00:45, 77.53it/s]█▉                                                   | 3/10 [02:22<05:31, 47.37s/it]
+{'Reconstruction_Loss': 2.848330291459248, 'KLD': 113.77314788636346, 'BoW_Loss': 1.9644554620098353, 'loss': 1.0287477215458405, 'lr_vae': 0.007494318181818182}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 211.98it/s]
+{'loss': 4.735032648023094, 'Reconstruction_Loss': 3.324195135750606, 'KLD': 104.47878644611038, 'BoW_Loss': 2.299281116204157}
+iteration: 3521it [00:44, 78.49it/s]█████████▏                                           | 4/10 [03:10<04:45, 47.58s/it]
+{'Reconstruction_Loss': 2.5786331810014413, 'KLD': 112.19771394564394, 'BoW_Loss': 1.7581579858836691, 'loss': 0.9345516133836574, 'lr_vae': 0.006242897727272727}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 207.90it/s]
+{'loss': 4.57805527213035, 'Reconstruction_Loss': 3.2036284670643775, 'KLD': 110.01854372864366, 'BoW_Loss': 2.198760916213066}
+iteration: 3521it [00:44, 78.59it/s]████████████████▌                                    | 5/10 [03:57<03:57, 47.50s/it]
+{'Reconstruction_Loss': 2.3304521783196117, 'KLD': 112.28693204195585, 'BoW_Loss': 1.5721639685496722, 'loss': 0.8493128726679438, 'lr_vae': 0.004991477272727272}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 216.32it/s]
+{'loss': 4.453044562423766, 'Reconstruction_Loss': 3.1148335383914643, 'KLD': 106.7995532758082, 'BoW_Loss': 2.1424242754331644}
+iteration: 3521it [00:45, 77.93it/s]███████████████████████▊                             | 6/10 [04:45<03:09, 47.41s/it]
+{'Reconstruction_Loss': 2.108794690588039, 'KLD': 108.61262039838952, 'BoW_Loss': 1.4273167679462149, 'loss': 0.7734961554141452, 'lr_vae': 0.0037400568181818186}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 214.96it/s]
+{'loss': 4.305705118552579, 'Reconstruction_Loss': 3.0075449698737367, 'KLD': 107.49302777852098, 'BoW_Loss': 2.058855177168346}
+iteration: 3521it [00:43, 80.13it/s]███████████████████████████████                      | 7/10 [05:32<02:22, 47.48s/it]
+{'Reconstruction_Loss': 1.8969122978819537, 'KLD': 106.02769027748964, 'BoW_Loss': 1.2929374139995429, 'loss': 0.7021125555546301, 'lr_vae': 0.002488636363636364}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 212.31it/s]
+{'loss': 4.170113270063457, 'Reconstruction_Loss': 2.915866487504986, 'KLD': 103.85065515447269, 'BoW_Loss': 1.9892402985636262}
+iteration: 3521it [00:44, 78.33it/s]██████████████████████████████████████▍              | 8/10 [06:19<01:34, 47.14s/it]
+{'Reconstruction_Loss': 1.7041823827957316, 'KLD': 104.04342429917565, 'BoW_Loss': 1.1616253810664026, 'loss': 0.6362759072954632, 'lr_vae': 0.0012372159090909092}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 214.24it/s]
+{'loss': 4.0781258057708145, 'Reconstruction_Loss': 2.860241660817799, 'KLD': 101.7893608526241, 'BoW_Loss': 1.9268215098235175}
+iteration: 3521it [00:44, 78.46it/s]█████████████████████████████████████████████▋       | 9/10 [07:06<00:47, 47.22s/it]
+{'Reconstruction_Loss': 1.5378532794926667, 'KLD': 102.6300912308307, 'BoW_Loss': 1.0475027320482482, 'loss': 0.5795449669541909, 'lr_vae': 0.0}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 213.17it/s]
+{'loss': 4.030486298167309, 'Reconstruction_Loss': 2.8270796069722803, 'KLD': 101.41743793226269, 'BoW_Loss': 1.8997261836026231}
+train vae: 100%|████████████████████████████████████████████████████████████████████████| 10/10 [07:53<00:00, 47.38s/it]
+iteration: 3521it [01:14, 47.21it/s]                                                              | 0/5 [00:00<?, ?it/s]
+{'loss': 0.3702084968592342, 'loss_gen': 1.4808339874369367, 'loss_cnt': 0.0, 'lr_ext': 2.9991477272727275e-05}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 183.18it/s]
+{'loss': 0.45655991163272447, 'loss_gen': 0.45655991163272447, 'loss_cnt': 0.0}███▌  | 493/511 [00:02<00:00, 186.62it/s]
+iteration: 3521it [01:14, 47.53it/s]▍                                                     | 1/5 [01:18<05:12, 78.18s/it]
+{'loss': 0.020027381541629054, 'loss_gen': 0.08010952616651622, 'loss_cnt': 0.0, 'lr_ext': 2.2482954545454546e-05}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 181.20it/s]
+{'loss': 0.5938962286815718, 'loss_gen': 0.5938962286815718, 'loss_cnt': 0.0}███████▌| 508/511 [00:02<00:00, 188.88it/s]
+iteration: 3521it [01:14, 47.47it/s]█████████████▊                                        | 2/5 [02:35<03:52, 77.44s/it]
+{'loss': 0.012918532047071858, 'loss_gen': 0.051674128188287434, 'loss_cnt': 0.0, 'lr_ext': 1.497443181818182e-05}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 179.74it/s]
+{'loss': 0.6325181684731971, 'loss_gen': 0.6325181684731971, 'loss_cnt': 0.0}██████▊ | 502/511 [00:02<00:00, 183.86it/s]
+iteration: 3521it [01:14, 47.40it/s]███████████████████████████▏                          | 3/5 [03:52<02:34, 77.26s/it]
+{'loss': 0.00980503207393791, 'loss_gen': 0.03922012829575164, 'loss_cnt': 0.0, 'lr_ext': 7.465909090909091e-06}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 181.44it/s]
+{'loss': 0.7004854920558967, 'loss_gen': 0.7004854920558967, 'loss_cnt': 0.0}███████▌| 508/511 [00:02<00:00, 188.49it/s]
+iteration: 3521it [01:14, 47.47it/s]████████████████████████████████████████▌             | 4/5 [05:09<01:17, 77.20s/it]
+{'loss': 0.008074077337543705, 'loss_gen': 0.03229630935017482, 'loss_cnt': 0.0, 'lr_ext': 0.0}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 181.27it/s]
+{'loss': 0.7420335868100131, 'loss_gen': 0.7420335868100131, 'loss_cnt': 0.0}███████▏| 505/511 [00:02<00:00, 186.54it/s]
+train extraction: 100%|███████████████████████████████████████████████████████████████████| 5/5 [06:26<00:00, 77.26s/it]
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+PyTorch: setting up devices
+gen_init...: 3750it [00:05, 680.55it/s]
+number of relations :  105
+number of vae vocabularies :  9870
+gen_init...: 4088it [00:06, 617.44it/s]
+number of relations :  105
+number of vae vocabularies :  9870
+Could not locate the tokenizer configuration file, will try to use the model config instead.
+loading configuration file config.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.47.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading file vocab.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/vocab.json
+loading file merges.txt from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/merges.txt
+loading file tokenizer.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/tokenizer.json
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at None
+loading file tokenizer_config.json from cache at None
+loading file chat_template.jinja from cache at None
+loading configuration file config.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.47.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+number of relations :  105
+number of vae vocabularies :  9870
+gen_init...: 4088it [00:06, 660.29it/s]
+
+ dataloader initialized!
+Could not locate the tokenizer configuration file, will try to use the model config instead.
+loading configuration file config.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.47.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading file vocab.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/vocab.json
+loading file merges.txt from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/merges.txt
+loading file tokenizer.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/tokenizer.json
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at None
+loading file tokenizer_config.json from cache at None
+loading file chat_template.jinja from cache at None
+loading configuration file config.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.47.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+number of relations :  105
+number of vae vocabularies :  9870
+gen_init...: 3750it [00:05, 724.02it/s]
+
+ dataloader initialized!
+loading configuration file config.json from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "output_hidden_states": true,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.47.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading weights file model.safetensors from cache at /home/salehafzoon/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/model.safetensors
+Generate config GenerationConfig {
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "output_hidden_states": true,
+  "pad_token_id": 1
+}
+
+All model checkpoint weights were used when initializing BartForConditionalGeneration.
+
+All the weights of BartForConditionalGeneration were initialized from the model checkpoint at facebook/bart-base.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BartForConditionalGeneration for predictions without further training.
+Generation config file not found, using a generation config created from the model config.
+using trained model
+iteration: 469it [00:06, 72.77it/s]                                                               | 0/5 [00:00<?, ?it/s]
+{'Reconstruction_Loss': 2.0467248671262825, 'KLD': 100.66303651724289, 'BoW_Loss': 1.3100265959641126, 'loss': 0.7383489374285822, 'lr_vae': 0.009978632478632479}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 214.15it/s]
+{'loss': 4.4894258448755675, 'Reconstruction_Loss': 3.1508552213076904, 'KLD': 105.93738530526656, 'BoW_Loss': 2.1474543152273884}
+iteration: 469it [00:06, 72.07it/s]                                                       | 1/5 [00:08<00:35,  8.91s/it]
+{'Reconstruction_Loss': 1.9027121778373062, 'KLD': 112.97331343530846, 'BoW_Loss': 1.229946741747732, 'loss': 0.7000297079843752, 'lr_vae': 0.007457264957264957}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 212.07it/s]
+{'loss': 4.70658706265653, 'Reconstruction_Loss': 3.2932644218577773, 'KLD': 113.78261869247646, 'BoW_Loss': 2.2577321831945767}
+iteration: 469it [00:06, 67.97it/s]██████████▌                                            | 2/5 [00:17<00:26,  8.95s/it]
+{'Reconstruction_Loss': 1.5473703661877563, 'KLD': 113.84266116014167, 'BoW_Loss': 1.0041656350653785, 'loss': 0.5835149591919709, 'lr_vae': 0.004935897435897436}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 211.12it/s]
+{'loss': 4.741826604257125, 'Reconstruction_Loss': 3.3325543915803975, 'KLD': 108.74346604319234, 'BoW_Loss': 2.2748270899630905}
+iteration: 469it [00:06, 71.41it/s]█████████████████████████▍                             | 3/5 [00:27<00:18,  9.14s/it]
+{'Reconstruction_Loss': 1.2454728144370024, 'KLD': 110.61498824975638, 'BoW_Loss': 0.8134311283187338, 'loss': 0.48218146068200884, 'lr_vae': 0.002414529914529915}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 214.51it/s]
+{'loss': 4.711714196811683, 'Reconstruction_Loss': 3.317933545742594, 'KLD': 106.59207504182879, 'BoW_Loss': 2.254600947223973}
+iteration: 469it [00:06, 73.27it/s]████████████████████████████████████████▏              | 4/5 [00:36<00:09,  9.09s/it]
+{'Reconstruction_Loss': 1.02331743987734, 'KLD': 107.99439093095661, 'BoW_Loss': 0.6809556615925526, 'loss': 0.4084453113806019, 'lr_vae': 0.0}
+iteration: 100%|█████████████████████████████████████████████████████████████████████| 511/511 [00:02<00:00, 214.13it/s]
+{'loss': 4.692490166180755, 'Reconstruction_Loss': 3.3103339221086654, 'KLD': 104.86491997227976, 'BoW_Loss': 2.2399878800567}
+train vae: 100%|██████████████████████████████████████████████████████████████████████████| 5/5 [00:45<00:00,  9.02s/it]
+*** Model initialization ***
+Using auto half precision backend
+*** Train ***
+0it [00:00, ?it/s]Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+***** train metrics *****
+  train_samples = 3750
+*** Evaluate ***
+
+***** Running Evaluation *****
+  Num examples = 4088
+  Batch size = 8
+Traceback (most recent call last):
+  File "/home/salehafzoon/Desktop/PAED/trainer_finetune.py", line 737, in <module>
+    main(
+  File "/home/salehafzoon/Desktop/PAED/trainer_finetune.py", line 606, in main
+    finetuning(save_dir, path_model, data_name, split, logger, last=last)
+  File "/home/salehafzoon/Desktop/PAED/trainer_finetune.py", line 510, in finetuning
+    trainer.finetune_with_sampler(train_data, dev_data, train_args, logger,
+  File "/home/salehafzoon/Desktop/PAED/trainer_finetune.py", line 307, in finetune_with_sampler
+    eval_model(trainer, val_dataset)
+  File "/home/salehafzoon/Desktop/PAED/trainer_finetune.py", line 423, in eval_model
+    metrics = trainer.evaluate()
+  File "/home/salehafzoon/Desktop/PAED/.venv/lib/python3.10/site-packages/transformers/trainer_seq2seq.py", line 195, in evaluate
+    return super().evaluate(eval_dataset, ignore_keys=ignore_keys, metric_key_prefix=metric_key_prefix)
+  File "/home/salehafzoon/Desktop/PAED/.venv/lib/python3.10/site-packages/transformers/trainer.py", line 4051, in evaluate
+    output = eval_loop(
+  File "/home/salehafzoon/Desktop/PAED/.venv/lib/python3.10/site-packages/transformers/trainer.py", line 4245, in evaluation_loop
+    losses, logits, labels = self.prediction_step(model, inputs, prediction_loss_only, ignore_keys=ignore_keys)
+  File "/home/salehafzoon/Desktop/PAED/.venv/lib/python3.10/site-packages/transformers/trainer_seq2seq.py", line 293, in prediction_step
+    return super().prediction_step(
+  File "/home/salehafzoon/Desktop/PAED/.venv/lib/python3.10/site-packages/transformers/trainer.py", line 4418, in prediction_step
+    return_loss = inputs.get("return_loss", None)
+AttributeError: 'list' object has no attribute 'get'
+0it [00:00, ?it/s]

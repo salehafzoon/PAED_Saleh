@@ -12,3 +12,8 @@ seqeval==1.2.2
 pyyaml
 tqdm
 spacy
+
+# pip install fastavro fire nltk lxml editdistance seqeval pyyaml tqdm spacy
+# pip install datasets pandas transformers
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+# pip install accelerate

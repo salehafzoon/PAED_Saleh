@@ -217,7 +217,7 @@ class Generator(BaseModel):
         data.save(path_out)
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     
-    # Fire()
+#     # Fire()
 

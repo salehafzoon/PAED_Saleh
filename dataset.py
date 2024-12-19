@@ -76,6 +76,7 @@ class Vocabulary:
 class VAEData(Dataset):
     def __init__(self, datas=None, vocab=None, path=None, train_args=None,
                  name='train', data_name='u2t_map_all', split='unseen_10_seed_0/'):
+        
         if datas is None:
             path_in = "outputs/data/splits/zero_rte/" + data_name + "/" + split
             self.save_dir = str(Path(path) / "extractor")
@@ -111,6 +112,12 @@ class VAEData(Dataset):
         dat = pd.DataFrame(data)
 
         return [pad_sequence(dat[idx], batch_first=True) for idx in dat]
+    
+    # def collate_fn(self, data):
+    #     keys = ["input_ids", "attention_mask", "labels", "decoder_input_ids"]
+    #     return {k: torch.stack([item[i] for item in data]) for i, k in enumerate(keys)}
+
+
 
     def tokenize(self, inputs, tokenizer=None):
 
@@ -734,7 +741,8 @@ class ExtDataTr(SingleExtTr):
         indices = torch.topk(kl_div, k=k, dim=1, largest=True)[1]  # [B, k] B is the total number of relations
 
         # indices -> int selected vae_relations -> str relations
-        self.selected_relations_idx = vae_relations[indices]
+        # self.selected_relations_idx = vae_relations[indices]
+        self.selected_relations_idx = vae_relations[indices.to(vae_relations.device)]
 
     def preprocess_fun(self):
 
